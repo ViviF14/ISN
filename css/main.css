@@ -1,9 +1,43 @@
 body
 {
 	background-color: black;
+	color: white;
 }
 
-h1
+/* Barre de navigation */
+.navbar.navbar-inverse.navbar-static-top
 {
-	color: white;
+	text-align: center;
+	margin: 0px;
+	background-color: transparent;
+}
+
+nav ul.nav
+{
+	display: inline-block;
+}
+
+.navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:visited
+{
+	font-size: 1.6em;
+	border-bottom: 1px solid white;
+	color: darkslategrey
+}
+
+@media (min-width: 768px){
+	.navbar-nav
+	{
+		float: none !important;
+	}
+}
+
+/* main */
+#main
+{
+	padding: 10px;
+}
+
+#main h1
+{
+	text-align: center;
 }
