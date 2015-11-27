@@ -21,7 +21,7 @@ nav ul.nav
 {
 	font-size: 1.6em;
 	border-bottom: 1px solid white;
-	color: darkslategrey
+	color: dimgrey
 }
 
 @media (min-width: 768px){
