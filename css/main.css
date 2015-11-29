@@ -1,7 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600);
 body
 {
-	background-color: black;
+	background-color: #161B1C;
 	color: white;
+}
+
+.row
+{
+	padding: 0px;
+	margin: 0px;
 }
 
 /* Barre de navigation */
@@ -9,7 +16,8 @@ body
 {
 	text-align: center;
 	margin: 0px;
-	background-color: transparent;
+	background-color: #101415;
+	border: none;
 }
 
 nav ul.nav
@@ -21,7 +29,7 @@ nav ul.nav
 {
 	font-size: 1.6em;
 	border-bottom: 1px solid white;
-	color: dimgrey
+	color: white
 }
 
 @media (min-width: 768px){
@@ -35,9 +43,105 @@ nav ul.nav
 #main
 {
 	padding: 10px;
+	margin-bottom: 20px;
 }
 
-#main h1
+#main .partie
+{
+	padding: 10px 0px;
+}
+
+#main .main
+{
+}
+
+#main .main > h1
+{
+	border-left: 2px solid white;
+	padding:  10px;
+	margin: 0px;
+	font-size: 1.8em;
+	font-family: 'Raleway';
+	font-weight: 600;
+	background-color: #101415;
+}
+
+.main > .contain
+{
+	padding-top: 10px;
+	font-size: 1.2em;
+	font-family: 'Raleway';
+}
+
+.main > .contain > .title
+{
+	font-size: 1.4em;
+	text-decoration: underline;
+}
+
+.main > p.contain > img.floatl
+{
+	float: left;
+	padding: 0px 20px 20px 0px;
+}
+
+.main > p.contain > img.floatr
+{
+	float: right;
+	padding: 20px 0px 20px 20px;
+}
+
+.main > p.descri
+{
+	margin: 0px;
+	display: inline-block;
+	font-size: 1.2em;
+	padding-right: 10px;
+	border-right: 2px solid white;
+}
+
+.important
+{
+	color: dimgrey;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.main .cmd
+{
+	font-size: 0.8em;
+}
+
+.clear
+{
+	clear: both;
+	margin: 0px;
+}
+
+@-webkit-keyframes test {
+    0% {
+       -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+#footer 
 {
 	text-align: center;
+	margin-bottom: 20px;
+}
+
+.rotate
+{
+	-webkit-animation: test 20s infinite linear;
+	height: 200px;
+	display: inline-block;
+}
+
+ol > li 
+{
+	font-size: 1.3em;
+	font-family: 'Raleway';
 }

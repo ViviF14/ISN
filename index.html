@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Mini-projet par Vianney - Francois - Lucas</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<link href="css/main.css" rel="stylesheet" />
 	</head>
@@ -21,15 +22,110 @@
 		
 		<!-- Main !-->
 		<div id="main" class="row">
-			<div class="col-lg-4">
-				<h1>Francois</h1>
+			
+			<!-- Francois !-->
+			<div class="row partie">
+				<div class="col-lg-10 main">
+					<h1><i class="fa fa-linux"></i> Linus Torvald </h1>
+					<!-- 
+						
+						!-->
+					</div>
+				<div class="col-lg-2">
 				</div>
-			<div class="col-lg-4">
-				<h1>Vianney</h1>
-				</div>
-			<div class="col-lg-4">
-				<h1>Lucas</h1>
 			</div>
+			
+			<!-- Vianney !-->
+			<div class="row partie">
+				<div class="col-lg-2">
+					</div>
+				<div class="col-lg-10 main">
+					<h1><i class="fa fa-wifi"></i> Un métier: Ingénieur réseau </h1>
+				</div>
+			</div>
+			
+			<!-- Lucas !-->
+			<div class="row partie">
+				<div class="col-lg-10 main">
+					<h1><i class="fa fa-internet-explorer"></i> Internet et votre ordinateur </h1>
+					<p class="contain"><br />
+						Pour montrer l'interaction entre "internet" et notre ordinateur je vais prendre l'exemple d'une requête de page web <br /><br /> 
+
+						<span class="title">I. Le PC</span class="title"><br />
+						
+						Pour qu'un utilisateur ai accès à internet il a besoin d'un navigateur (browser). C'est grâce à celui-ci que l'utilisateur a une interface
+						graphique (GUI) et qu'il peut envoyer et recevoir des informations sur internet. <br /> Le port utilisé par ce type de logiciel est<span class="important">
+						par défaut 80 </span> ou 443 pour le HTTPS. Quand l'utilisateur demande une page web <span class="important">il va utiliser le protocole HTTP </span> (voir HTTPS) sans le savoir. <br /> <br /> 						
+						<img class="floatl"src="include/http.png" alt="requête http standard" />
+						C'est son navigateur qui va formuler la requête compréhensible par le serveur web distant.	<br />											
+						Il existe différents protocoles internet comme SMTP (mails:25), FTP (File transfert Protocols:21), Bittorent (p2p)  etc ..<br /><br />
+					</p>				
+					<p class="clear"></p>
+					<p class="cmd"> Requête HTTP GET standard </p>
+					
+					<p class="contain" >
+												
+						<span class="title">II. Le réseau local</span><br />
+						
+						A proprement parler notre ordinateur <span class="important">ne communique pas directement avec internet</span>. Il passe par le biais du routeur (box internet)
+						pour avoir accès à internet.<br />
+						<br />
+						<img class="floatl" src="include/local.png" alt="http://benjamin-balet.info/wp-content/uploads/2011/05/Schema_réseau_local_et_Internet.png" />
+						Notre ordinateur ( 192.168.1.10 ) appartient au réseau local 192.168.1.0/24. On remarque d'autres appareils sur le réseau dont le routeur
+						192.168.1.1. <br /><br />Quand l'ordinateur va demander une page web <span class="important"> il va s'adresser en premier au routeur </span> via divers protocoles. 
+						Le routeur qui lui, est relié à internet, va demander la page et la retourner à notre PC.<br /><br />
+						
+						Mais comme on l'a remarqué il y a plusieurs appareils sur le réseau et donc comment le routeur va-t-il savoir qui a demandé la page web ?<br />
+						<span class="important">Grâce à l'adresse ip </span> (Internet Protocol) codée sur 4 octets (32 bits) pour la version 4. <br /><br />
+						<img src="include/ip.png" alt="cmd ipconfig" /><br />
+						<span class="cmd"> Commande ipconfig avec le Powershell windows </span>
+						</p>
+						<p class="clear"></p>
+						<p class="contain">
+						Il suffira au routeur<span class="important"> de se rappeler de l'adresse ip qui lui a demandée la page </span> pour lui donner la réponse de la requête. Ici une page web<br /><br />
+						
+						<span class="title">III. Internet</span><br />
+						
+						Après notre routeur la requête va se retrouver sur internet. Elle va donc devoir <span class="important">trouver son chemin jusqu'au serveur demandé</span>. Dans le 
+						cas de ma requête sur www.google.fr elle va essayer de rejoindre le serveur dont l'IP publique est 77.154.221.248<br />
+						<img class="floatr" src="include/tracert.png" alt="tracert www.google.fr" />
+						<br />
+						En effet une machine a deux IP une locale (192.168.1.xxx) et une IP publique ici 77.154.221.248. <br /><br />
+						Lors de ma requête vers google je <span class="important">ne connais pas l'adresse du serveur distant </span> mais je connais son nom de domaine www.goole.fr. C'est donc grâce un protocole (DNS) que je vais
+						résoudre l'adresse IP de la machine hébergent www.google.fr. C'est grâce à lui que <span class="important"> ma requête va trouver son chemin à travers internet.</span><br /><br />
+						
+						On remarque grâce à la commande tracert que notre requête va passer à travers plusieurs intermédiaires avant d'arriver à destination.
+						<span class="important">Cela montre une partie assez complexe d'internet.</span>
+						
+						Voilà comment de notre PC nous avons accès à internet.
+						</p>	
+						
+						<p class="clear"></p>
+											
+						<ol>
+							<li>
+								Dans un premier lieu cela se passe sur notre PC grâce à notre navigateur qui nous 
+								permet de <span class="important">formuler et d'interpreter </span> des requêtes.
+							</li>
+							<li>						
+								Puis dans un second sur notre réseau local ou nos requêtes <span class="important">sont dirigées et proviennent</span>
+								depuis notre box (routeur). 
+							</li>
+							<li>
+								Et pour finir sur internet où nos requêtes <span class="important">se dirigent vers des serveurs distant </span>qui, à leurs tours nous 
+								envoient des réponses à nos requêtes qui vont alors <span class="important">faire le chemin inverse pour apparaitre sur notre écran</span>.
+							</li>
+						</ol>
+										
+					</div>
+				<div class="col-lg-2 ">
+				</div>
+			</div>
+			
+		</div>
+		
+		<div id="footer">
+			<img class="rotate" src="include/fuck.png" />
 		</div>
 			
 	</body>
